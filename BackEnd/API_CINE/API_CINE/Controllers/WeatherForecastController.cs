@@ -6,6 +6,7 @@ namespace API_CINE.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        //TIEMPO CLIMA
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
