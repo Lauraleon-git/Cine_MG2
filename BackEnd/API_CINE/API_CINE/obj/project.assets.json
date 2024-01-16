@@ -4433,24 +4433,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USERPC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+      "projectUniqueName": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
       "projectName": "API_CINE",
-      "projectPath": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
-      "packagesPath": "C:\\Users\\USERPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
+      "projectPath": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\USERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4458,7 +4457,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4517,7 +4515,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
