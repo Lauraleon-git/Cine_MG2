@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_CINE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cf1379868e23769863adbfe11b3beb1ed70766a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62e6729918e6c11a3ba6e1772ce42abf64bbbaf2")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_CINE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_CINE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
