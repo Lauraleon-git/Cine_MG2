@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
   },
   "projects": {
@@ -13,30 +12,13 @@
         "projectPath": "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
         "outputPath": "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
-=======
-    "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
-  },
-  "projects": {
-    "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
-        "projectName": "API_CINE",
-        "projectPath": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Usuario\\Documents\\UPDS\\MOD GRADO\\MOD 2\\PROYECTO\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
->>>>>>> 34da2b8891e8de15d30252c958b3059f8decaeaa
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 34da2b8891e8de15d30252c958b3059f8decaeaa
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
