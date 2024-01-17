@@ -29,6 +29,29 @@ namespace API_CINE.Controllers
             return await _context.Reservas.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        [HttpGet("reporte2")]
+        public async Task<ActionResult<List<reporte2>>> ListaReservaPersona()
+        {
+            var consulta = await _context.Reservas.Select(x => new reporte2
+            {
+                IdReserva = x.Id,
+                Cantidad = x.Cantidad,
+                Nombre = x.Persona.Nombre,
+                Apellido = x.Persona.Apellido,
+                Ci = x.Persona.Ci,
+            }).ToListAsync();
+            return Ok(consulta);
+        }
+        public class reporte2
+        {
+            public int? IdReserva { get; set; }
+            public int? Cantidad { get; set; }
+            public string? Nombre { get; set; }
+            public string? Apellido { get; set; }
+            public int? Ci { get; set; }
+        }
+
+
 
         // POST api/<ReservaController>
         [HttpPost]
