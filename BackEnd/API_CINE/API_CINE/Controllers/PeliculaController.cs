@@ -31,20 +31,63 @@ namespace API_CINE.Controllers
 
         // POST api/<PeliculaController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post(Pelicula pelicula)
         {
+            if (pelicula != null)
+            {
+                _context.Peliculas.Add(pelicula);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else { return BadRequest("Debe ingresar datos validos"); }
         }
 
         // PUT api/<PeliculaController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult> Put(int id, Pelicula pelicula)
         {
+            Pelicula peliculaModificar = await _context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
+            if (peliculaModificar != null)
+            {
+                peliculaModificar.Titulo = pelicula.Titulo;
+                peliculaModificar.Sinopsis = pelicula.Sinopsis;
+                peliculaModificar.Director = pelicula.Director;
+                peliculaModificar.Pais = pelicula.Pais;
+                peliculaModificar.Año = pelicula.Año;
+                peliculaModificar.Duracion = pelicula.Duracion;
+                peliculaModificar.Genero = pelicula.Genero;
+                peliculaModificar.Productora = pelicula.Productora;
+                peliculaModificar.Idioma = pelicula.Idioma;
+                peliculaModificar.Clasificacion = pelicula.Clasificacion;
+                peliculaModificar.PortadaPelicula = pelicula.PortadaPelicula;
+                peliculaModificar.Trailer = pelicula.Trailer;
+                peliculaModificar.Estado = pelicula.Estado;
+
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // DELETE api/<PeliculaController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id, Pelicula pelicula)
         {
+            Pelicula peliculaEliminar = await _context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
+            if (peliculaEliminar != null)
+            {
+                _context.Remove(peliculaEliminar);
+
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
