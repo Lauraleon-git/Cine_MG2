@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
+    "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
   },
   "projects": {
-    "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {
+    "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+        "projectUniqueName": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
         "projectName": "API_CINE",
-        "projectPath": "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\Modalidad de Grado-2023\\Implementacion I--Osmar_Tito\\Cine_MG_Proyecto\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
+        "projectPath": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+        "packagesPath": "C:\\Users\\USERPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USERPC\\Desktop\\Proyecto_Cine\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
