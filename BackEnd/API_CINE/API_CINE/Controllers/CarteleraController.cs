@@ -33,20 +33,47 @@ namespace API_CINE.Controllers
 
         // POST api/<CarteleraController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post(Cartelera cartelera)
         {
+            if (cartelera != null)
+            {
+                _context.Carteleras.Add(cartelera);
+                await _context.SaveChangesAsync();
+                return Ok();
+
+            }
+            else { return BadRequest("Debe ingresar datos validos"); }
         }
 
         // PUT api/<CarteleraController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult> Put(int id, Cartelera cartelera)
+
         {
+            Cartelera carteleramodificar = await _context.Carteleras.FirstOrDefaultAsync(x => x.Id == id);
+            if (carteleramodificar != null)
+            {
+                carteleramodificar.Precio = carteleramodificar.Precio;
+                carteleramodificar.CantidadBoletos = carteleramodificar.CantidadBoletos;
+                carteleramodificar.Horario = cartelera.Horario;
+                carteleramodificar.Estado = cartelera.Estado;
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // DELETE api/<CarteleraController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id, Cartelera cartelera)
         {
+            Cartelera carteleraEliminar = await _context.Carteleras.FirstOrDefaultAsync(x => x.Id == id);
+            _context.Remove(carteleraEliminar);
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }
