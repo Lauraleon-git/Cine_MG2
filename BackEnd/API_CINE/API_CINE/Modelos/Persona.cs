@@ -14,17 +14,22 @@ public partial class Persona
     public int Id { get; set; }
 
     [StringLength(50)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Nombre { get; set; } = null!;
 
     [StringLength(50)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Apellido { get; set; } = null!;
-
+    [Required(ErrorMessage = "el campo es requerido")]
     public int Telefono { get; set; }
+   
 
     [Column("CI")]
+    [Required(ErrorMessage = "el campo es requerido")]
     public int Ci { get; set; }
 
     [StringLength(50)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Direccion { get; set; } = null!;
 
     [InverseProperty("Persona")]

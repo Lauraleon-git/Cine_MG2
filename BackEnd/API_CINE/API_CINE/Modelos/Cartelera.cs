@@ -12,14 +12,17 @@ public partial class Cartelera
     [Key]
     public int Id { get; set; }
 
+    [Required(ErrorMessage = "el campo es requerido")]
     public int Precio { get; set; }
 
     [Column("Cantidad_boletos")]
+    [Required(ErrorMessage = "el campo es requerido")]
     public int CantidadBoletos { get; set; }
-
+    [Required(ErrorMessage = "el campo es requerido")]
     public DateTime Horario { get; set; }
 
     [Column("PromocionID")]
+  
     public int PromocionId { get; set; }
 
     public int PeliculaId { get; set; }

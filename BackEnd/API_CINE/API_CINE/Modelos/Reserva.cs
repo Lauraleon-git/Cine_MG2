@@ -11,12 +11,13 @@ public partial class Reserva
 {
     [Key]
     public int Id { get; set; }
-
+    [Required(ErrorMessage = "el campo es requerido")]
     public int Cantidad { get; set; }
 
     [Column("Fecha_reserva")]
+    [Required(ErrorMessage = "el campo es requerido")]
     public DateTime FechaReserva { get; set; }
-
+    
     public string Estado { get; set; } = null!;
 
     public int PersonaId { get; set; }

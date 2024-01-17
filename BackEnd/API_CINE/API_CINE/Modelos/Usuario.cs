@@ -14,16 +14,19 @@ public partial class Usuario
 
     [Column("Usuario")]
     [StringLength(50)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Usuario1 { get; set; } = null!;
 
     [StringLength(50)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Contraseña { get; set; } = null!;
-
+    [Required(ErrorMessage = "el campo es requerido")]
     public DateTime Fecha { get; set; }
-
+    
     public string Estado { get; set; } = null!;
-
+    
     public int PersonasId { get; set; }
+
 
     public int RolesId { get; set; }
 

@@ -13,11 +13,13 @@ public partial class Sala
     public int Id { get; set; }
 
     [StringLength(10)]
+    [Required(ErrorMessage = "el campo es requerido")]
     public string Codigo { get; set; } = null!;
 
     [Column("Cantidad_Asientos")]
+    [Required(ErrorMessage = "el campo es requerido")]
     public int CantidadAsientos { get; set; }
-
+    
     public string? Estado { get; set; }
 
     [InverseProperty("Sala")]
