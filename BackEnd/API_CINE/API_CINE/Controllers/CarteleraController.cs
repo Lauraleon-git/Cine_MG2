@@ -31,6 +31,20 @@ namespace API_CINE.Controllers
             return await _context.Carteleras.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        [HttpGet("reporte1")]
+        public async Task<ActionResult<List<reporte1>>> ListarsalaspromocionesCartelera()
+        {
+            var consulta = await _context.Carteleras.Select(x => new reporte1
+            {
+                Idcartelera = x.Id,
+                Precio = x.Precio,
+                Titulo = x.Pelicula.Titulo,
+                sala = x.Sala.CantidadAsientos,
+                Promocion = x.Promocion.Nombre
+            }).ToListAsync();
+            return Ok(consulta);
+        }
+
         // POST api/<CarteleraController>
         [HttpPost]
         public async Task<ActionResult> Post(Cartelera cartelera)
@@ -75,26 +89,14 @@ namespace API_CINE.Controllers
             await _context.SaveChangesAsync();
             return Ok();
         }
-        [HttpGet("reporte3")]
-        public async Task<ActionResult<List<reporte3>>> ListarsalaspromocionesCartelera()
-        {
-            var consulta = await _context.Carteleras.Select(x => new reporte3
-            {
-                Idcartelera = x.Id,
-                Precio = x.Precio,
-                Titulo = x.Pelicula.Titulo,
-                sala = x.Sala.CantidadAsientos,
-                Promocion = x.Promocion.Nombre
-            }).ToListAsync();
-            return Ok(consulta);
-        }
-        public class reporte3
-        {
-            public int? Idcartelera { get; set; }
-            public int? Precio { get; set; }
-            public string? Titulo { get; set; }
-            public int? sala { get; set; }
-            public string? Promocion { get; set; }
-        }
+        
+    }
+    public class reporte1
+    {
+        public int? Idcartelera { get; set; }
+        public int? Precio { get; set; }
+        public string? Titulo { get; set; }
+        public int? sala { get; set; }
+        public string? Promocion { get; set; }
     }
 }
