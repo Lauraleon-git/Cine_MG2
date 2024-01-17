@@ -111,8 +111,5 @@ namespace API_CINE.Controllers
                 return NotFound();
             }
         }
-
-
-
     }
 }

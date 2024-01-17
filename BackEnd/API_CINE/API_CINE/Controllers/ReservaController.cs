@@ -32,20 +32,50 @@ namespace API_CINE.Controllers
 
         // POST api/<ReservaController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post(Reserva reserva)
         {
+            if (reserva != null)
+            {
+                _context.Reservas.Add(reserva);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else { return BadRequest("Debe ingresar datos validos"); }
         }
 
         // PUT api/<ReservaController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult> Put(int id, Reserva reserva)
         {
+            Reserva reservaModificar = await _context.Reservas.FirstOrDefaultAsync(x => x.Id == id);
+            if (reservaModificar != null)
+            {
+
+                reservaModificar.Cantidad = reserva.Cantidad;
+                reservaModificar.FechaReserva = reserva.FechaReserva;
+                reservaModificar.Estado = reserva.Estado;
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else { return NotFound(); }
         }
 
         // DELETE api/<ReservaController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id, Reserva reserva)
         {
+            Reserva reservaEliminar = await _context.Reservas.FirstOrDefaultAsync(x => x.Id == id);
+            if (reservaEliminar != null)
+            {
+                _context.Remove(reservaEliminar);
+
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
