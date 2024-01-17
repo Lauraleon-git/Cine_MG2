@@ -28,8 +28,6 @@ namespace API_CINE.Controllers
         {
             return await _context.Salas.FirstOrDefaultAsync(x => x.Id == id);
         }
-
-
         // POST api/<SalaController>
         [HttpPost]
         public async Task<ActionResult> Post(Sala sala)
