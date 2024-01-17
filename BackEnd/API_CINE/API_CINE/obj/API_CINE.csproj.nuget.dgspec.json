@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maiv3\\OneDrive\\Escritorio\\bv\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\PROY\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maiv3\\OneDrive\\Escritorio\\bv\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\PROY\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maiv3\\OneDrive\\Escritorio\\bv\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\PROY\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
         "projectName": "API_CINE",
-        "projectPath": "C:\\Users\\maiv3\\OneDrive\\Escritorio\\bv\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
-        "packagesPath": "C:\\Users\\maiv3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maiv3\\OneDrive\\Escritorio\\bv\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\PROY\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\API_CINE.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\PROY\\Cine_MG2\\BackEnd\\API_CINE\\API_CINE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\maiv3\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
