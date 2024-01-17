@@ -29,6 +29,28 @@ namespace API_CINE.Controllers
             return await _context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        [HttpGet("reporte1")]
+        public async Task<ActionResult<List<reporte1>>> ListapeliculasCartelera()
+        {
+            var consulta = await _context.Carteleras.Select(x => new reporte1
+            {
+                Idcartelera = x.Id,
+                Precio = x.Precio,
+                CantidadBoletos = x.CantidadBoletos,
+                Titulo = x.Pelicula.Titulo,
+                Anio = x.Pelicula.Año,
+            }).ToListAsync();
+            return Ok(consulta);
+        }
+        public class reporte1
+        {
+            public int? Idcartelera { get; set; }
+            public int? Precio { get; set; }
+            public int? CantidadBoletos { get; set; }
+            public string? Titulo { get; set; }
+            public int? Anio {  get; set; }
+        }
+
         // POST api/<PeliculaController>
         [HttpPost]
         public async Task<ActionResult> Post(Pelicula pelicula)
@@ -89,5 +111,8 @@ namespace API_CINE.Controllers
                 return NotFound();
             }
         }
+
+
+
     }
 }
