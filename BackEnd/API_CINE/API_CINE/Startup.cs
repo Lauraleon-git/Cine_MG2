@@ -1,6 +1,8 @@
 ﻿using API_CINE.Contexto;
 using API_CINE.Services.ImplementacionService;
+using API_CINE.Services.ImplementacionServices;
 using API_CINE.Services.InterfaceService;
+using API_CINE.Services.InterfacesService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -28,6 +30,8 @@ namespace API_CINE
                      Configuration.GetConnectionString("cadenaConexion")));
             services.AddTransient<IPersonaService, PersonaService>();
             services.AddTransient<IUsuarioService, UsuarioService>();
+            services.AddTransient<IRolService, RolService>();
+            services.AddTransient<ICarteleraService, CarteleraService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
