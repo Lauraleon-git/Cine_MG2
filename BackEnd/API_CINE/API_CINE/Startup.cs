@@ -1,4 +1,6 @@
 ﻿using API_CINE.Contexto;
+using API_CINE.Services.ImplementacionService;
+using API_CINE.Services.InterfaceService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -24,6 +26,8 @@ namespace API_CINE
             });
             services.AddDbContext<CineContext>(options => options.UseSqlServer(
                      Configuration.GetConnectionString("cadenaConexion")));
+            services.AddTransient<IPersonaService, PersonaService>();
+            services.AddTransient<IUsuarioService, UsuarioService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

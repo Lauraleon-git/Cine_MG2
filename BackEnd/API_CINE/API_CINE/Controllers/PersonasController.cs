@@ -1,5 +1,7 @@
 ﻿using API_CINE.Contexto;
 using API_CINE.Modelos;
+using API_CINE.Modelos.DTO;
+using API_CINE.Services.InterfaceService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,20 +13,20 @@ namespace API_CINE.Controllers
     [ApiController]
     public class PersonasController : ControllerBase
     {
-        private readonly CineContext _context;
-        public PersonasController(CineContext context)
+        IPersonaService _personaService;
+        public PersonasController(IPersonaService personaService)
         {
-            _context = context;
+            _personaService = personaService;
         }
         // GET: api/<PersonasController>
         [HttpGet]
-        public async Task<ActionResult<List<Persona>>> Get()
+        public async Task<ActionResult<List<PersonaDTO>>> Get()
         {
-            return await _context.Personas.ToListAsync();
+            return await _personaService.ListaPersonas();
         }
 
         // GET api/<PersonasController>/5
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public async Task<ActionResult<Persona>> Get(int id)
         {
             return await _context.Personas.FirstOrDefaultAsync(x => x.Id == id);
@@ -75,6 +77,6 @@ namespace API_CINE.Controllers
                 return Ok();
             }
             else { return NotFound(); }
-        }
+        }*/
     }
 }
