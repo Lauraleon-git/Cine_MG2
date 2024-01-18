@@ -1,5 +1,8 @@
 ﻿using API_CINE.Contexto;
 using API_CINE.Modelos;
+using API_CINE.Modelos.DTO;
+using API_CINE.Services.ImplementacionService;
+using API_CINE.Services.InterfaceService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
@@ -12,21 +15,21 @@ namespace API_CINE.Controllers
     [ApiController]
     public class PromocionController : ControllerBase
     {
-        private readonly CineContext _context;
-        public PromocionController(CineContext context)
+        IPromocionService _promocionService;
+        public PromocionController(IPromocionService promocionService)
         {
-            _context = context;
+            _promocionService = promocionService;
         }
         // GET: api/<PromocionController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<List<PromocionDTO>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _promocionService.ListaPromociones();
         }
 
 
         // GET api/<PromocionController>/5
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public async Task<ActionResult<Promocion>> Get(int id)
         {
             return await _context.Promocions.FirstOrDefaultAsync(x => x.Id == id);
@@ -82,5 +85,6 @@ namespace API_CINE.Controllers
                 return NotFound();
             }
         }
+        */
     }
 }

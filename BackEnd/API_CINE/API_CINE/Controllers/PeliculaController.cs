@@ -1,5 +1,8 @@
 ﻿using API_CINE.Contexto;
 using API_CINE.Modelos;
+using API_CINE.Modelos.DTO;
+using API_CINE.Services.ImplementacionService;
+using API_CINE.Services.InterfaceService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,19 +14,19 @@ namespace API_CINE.Controllers
     [ApiController]
     public class PeliculaController : ControllerBase
     {
-        private readonly CineContext _context;
-        public PeliculaController(CineContext context)
+        IPeliculaService _peliculaService;
+        public PeliculaController(IPeliculaService peliculaService)
         {
-            _context = context;
+            _peliculaService = peliculaService;
         }
         // GET: api/<PeliculaController>
         [HttpGet]
-        public async Task<ActionResult<List<Pelicula>>> Get()
+        public async Task<ActionResult<List<PeliculaDTO>>> Get()
         {
-            return await _context.Peliculas.ToListAsync();
+            return await _peliculaService.ListaPeliculas();
         }
         // GET api/<PeliculaController>/5
-        [HttpGet("{id}")]
+       /* [HttpGet("{id}")]
         public async Task<ActionResult<Pelicula>> Get(int id)
         {
             return await _context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
@@ -103,10 +106,10 @@ namespace API_CINE.Controllers
             {
                 return NotFound();
             }
-        }
+        }*/
         
     }
-
+       
     public class reporte2
     {
         public int? Idcartelera { get; set; }
