@@ -34,6 +34,8 @@ namespace API_CINE
             services.AddTransient<ICarteleraService, CarteleraService>();
             services.AddTransient<IPeliculaService, PeliculaService>();
             services.AddTransient<IPromocionService, PromocionService>();
+            services.AddTransient<IReservaService, ReservaService>();
+            services.AddTransient<ISalaService, SalaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

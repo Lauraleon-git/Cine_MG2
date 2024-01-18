@@ -1,5 +1,7 @@
 ﻿using API_CINE.Contexto;
 using API_CINE.Modelos;
+using API_CINE.Modelos.DTO;
+using API_CINE.Services.InterfaceService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,17 +13,18 @@ namespace API_CINE.Controllers
     [ApiController]
     public class SalaController : ControllerBase
     {
-        private readonly  CineContext _context;
-        public SalaController(CineContext context)
+        ISalaService _salaService;
+        public SalaController(ISalaService salaService)
         {
-            _context = context;
+            _salaService = salaService;
         }
-        // GET: api/<SalaController>
+        // GET: api/<ReservaController>
         [HttpGet]
-        public async Task<ActionResult<List<Sala>>> Get()
+        public async Task<ActionResult<List<SalaDTO>>> Get()
         {
-            return await _context.Salas.ToListAsync();
+            return await _salaService.ListaSalas();
         }
+        /*
         // GET api/<SalaController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Sala>> Get(int id)
@@ -72,5 +75,6 @@ namespace API_CINE.Controllers
             }
             else { return NotFound(); }
         }
+        */
     }
 }
